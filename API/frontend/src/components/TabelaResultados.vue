@@ -64,7 +64,7 @@ import { Options, Vue } from 'vue-class-component'
 })
 
 export default class TabelaResultados extends Vue {
-  resultados!: Array<any> 
+  resultados!: Array<any>
 }
 
 </script>
