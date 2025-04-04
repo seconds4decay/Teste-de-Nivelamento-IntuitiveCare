@@ -129,7 +129,7 @@ Navegue até o diretório do frontend e instale as dependências:
 
 ```bash
 cd ../frontend
-npm install
+npm install --force
 ```
 
 #### Executando o Frontend
@@ -137,7 +137,7 @@ npm install
 Para iniciar o servidor de desenvolvimento:
 
 ```bash
-npm run dev
+npm run serve
 ```
 
 O frontend estará disponível em `http://localhost:3000`.
