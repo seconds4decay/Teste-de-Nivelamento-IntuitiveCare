@@ -15,6 +15,7 @@ Antes de iniciar, certifique-se de que os seguintes softwares estão instalados 
 - [Git](https://git-scm.com/)
 - [Google Chrome](https://www.google.com/intl/pt-BR/chrome/)
 - [ChromeDriver](https://sites.google.com/chromium.org/driver/) compatível com a versão do seu Chrome
+- (Opcional) [Docker Compose](https://docs.docker.com/desktop/setup/install/)
 
 ---
 
@@ -103,9 +104,38 @@ AVISADOS DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último trimestre?
 
 A coleção está disponivel em: [Teste de API](https://teste-de-api-8297.postman.co/workspace/Team-Workspace~711bfd1e-3df6-4cb2-811d-8d05a4bf31ab/collection/40423840-9713d935-3035-4cde-a19c-e8939e645efe?action=share&creator=40423840)
 
-### Backend
+---
+### Opção 1: Iniciar com Docker 
 
-#### Instalação das Dependências
+#### 1. Navegue até a pasta raiz da API
+
+Navegue até o diretório principal da API 
+
+```bash
+cd ../API
+```
+
+#### 2. Construir e iniciar os contêineres:
+
+Execute o comando abaixo para iniciar os contáiners:
+
+```bash
+docker-compose up --build
+```
+
+#### 3. Encerrar a aplicação
+
+Para parar e remover os contêineres, pressione Ctrl+C no terminal onde os contêineres estão rodando ou execute:
+
+```bash
+docker-compose down
+```
+---
+### Opção 2: Iniciar Localmente
+
+#### Backend
+
+##### Instalação das Dependências
 
 Navegue até o diretório da API e instale as dependências:
 
@@ -115,7 +145,7 @@ pip install -r requirements.txt
 ```
 
 
-#### Executando o Servidor
+##### Executando o Servidor
 
 Para iniciar o servidor FastAPI:
 
@@ -125,9 +155,9 @@ uvicorn main:app --reload
 
 O servidor estará disponível em `http://127.0.0.1:8000`.
 
-### Frontend
+#### Frontend
 
-#### Instalação das Dependências
+##### Instalação das Dependências
 
 Navegue até o diretório do frontend e instale as dependências:
 
@@ -136,7 +166,7 @@ cd ../frontend
 npm install --force
 ```
 
-#### Executando o Frontend
+##### Executando o Frontend
 
 Para iniciar o servidor de desenvolvimento:
 
