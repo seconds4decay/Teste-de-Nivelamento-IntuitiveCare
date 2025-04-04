@@ -99,6 +99,10 @@ AVISADOS DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último trimestre?
 
 ## 4. Teste API
 
+### Coleção do Postman para Demonstrar a API
+
+A coleção está disponivel em: [Teste de API](https://teste-de-api-8297.postman.co/workspace/Team-Workspace~711bfd1e-3df6-4cb2-811d-8d05a4bf31ab/collection/40423840-9713d935-3035-4cde-a19c-e8939e645efe?action=share&creator=40423840)
+
 ### Backend
 
 #### Instalação das Dependências

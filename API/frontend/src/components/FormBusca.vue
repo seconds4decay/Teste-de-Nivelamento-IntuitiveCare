@@ -66,6 +66,12 @@ export default class FormBusuca extends Vue {
                 return
             }
             this.resultados = resposta.data.resultados
+
+            this.formData = {
+                registro: null,
+                cnpj: null,
+                razao_social: null
+            }
     }
 }
 </script>
