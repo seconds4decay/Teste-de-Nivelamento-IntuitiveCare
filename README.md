@@ -102,7 +102,7 @@ AVISADOS DE ASSISTÊNCIA A SAÚDE MEDICO HOSPITALAR" no último trimestre?
 
 ### Coleção do Postman para Demonstrar a API
 
-A coleção está disponivel em: [Teste de API](https://teste-de-api-8297.postman.co/workspace/Team-Workspace~711bfd1e-3df6-4cb2-811d-8d05a4bf31ab/collection/40423840-9713d935-3035-4cde-a19c-e8939e645efe?action=share&creator=40423840)
+A coleção está disponivel em: [Teste de API IntuitiveCare]([https://teste-de-api-8297.postman.co/workspace/Team-Workspace~711bfd1e-3df6-4cb2-811d-8d05a4bf31ab/collection/40423840-9713d935-3035-4cde-a19c-e8939e645efe?action=share&creator=40423840](https://documenter.getpostman.com/view/40423840/2sB2cX9MYU))
 
 ---
 ### Opção 1: Iniciar com Docker 
