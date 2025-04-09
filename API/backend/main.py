@@ -37,9 +37,15 @@ def buscar_operadora(
     filtro = pd.Series([False] * len(df))
 
     if registro is not None:
+        if(not registro.isnumeric()):
+            return {"error": "O registro deve conter apenas números."}
+        
         filtro |= df["Registro_ANS"].astype(str).str.contains(registro, na=False, case=False)
 
     if cnpj is not None:
+        if(not cnpj.isnumeric()):
+            return {"error": "O registro deve conter apenas números."}
+
         if len(cnpj) != 14:
             return {"error": "O CNPJ deve conter 14 dígitos."}
         filtro |= df["CNPJ"].astype(str).str.contains(cnpj, na=False, case=False)
