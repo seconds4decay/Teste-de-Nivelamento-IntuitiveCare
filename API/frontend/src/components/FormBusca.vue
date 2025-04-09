@@ -44,16 +44,24 @@ export default class FormBusuca extends Vue {
     resultados = []
 
     async enviarFormulario () {
-            this.resultados = []
+        this.resultados = []
 
-            if (!this.formData.registro && !this.formData.cnpj && !this.formData.razao_social) {
-                alert('Por favor, preencha pelo menos um campo.')
-                return
-            }
+        if (!this.formData.registro && !this.formData.cnpj && !this.formData.razao_social) {
+            alert('Por favor, preencha pelo menos um campo.')
+            return
+        }
 
-            console.log('Dados do formulário:', this.formData)
+        console.log('Dados do formulário:', this.formData)
 
-            const resposta = await axios.post('http://127.0.0.1:8000/api/buscar', this.formData)
+        try {
+            const resposta = await axios.get('http://127.0.0.1:8000/api/buscar', {
+                params: {
+                    registro: this.formData.registro || undefined,
+                    cnpj: this.formData.cnpj || undefined,
+                    razao_social: this.formData.razao_social || undefined
+                }
+            })
+
             console.log('Resposta da API:', resposta.data)
 
             if (resposta.data.resultados === undefined) {
@@ -65,6 +73,7 @@ export default class FormBusuca extends Vue {
                 alert('Nenhum resultado encontrado.')
                 return
             }
+
             this.resultados = resposta.data.resultados
 
             this.formData = {
@@ -72,6 +81,10 @@ export default class FormBusuca extends Vue {
                 cnpj: null,
                 razao_social: null
             }
+        } catch (erro) {
+            console.error('Erro na requisição:', erro)
+            alert('Erro ao se comunicar com a API.')
+        }
     }
 }
 </script>
